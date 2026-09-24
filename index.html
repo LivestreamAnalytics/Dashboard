@@ -6,15 +6,17 @@
   <title>Livestream Analytics Dashboard</title>
   <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8w_WbSunn6nmiBuMmYsDDUsCffqmP7bwEd6gYkw5Y8Q&s=10" />
 
-  <!-- Instant Browser Meta Redirect -->
+  <!-- Immediate Top-Level Browser Redirect -->
   <meta http-equiv="refresh" content="0; url=https://livestreamanalytics.vercel.app/" />
-
-  <!-- Canonical link -->
   <link rel="canonical" href="https://livestreamanalytics.vercel.app/" />
 
   <script>
-    // Immediate JavaScript Top-Level Redirect
-    window.location.replace("https://livestreamanalytics.vercel.app/");
+    // Break out of any nested frame and redirect directly to production
+    if (window.top !== window.self) {
+      window.top.location.replace("https://livestreamanalytics.vercel.app/");
+    } else {
+      window.location.replace("https://livestreamanalytics.vercel.app/");
+    }
   </script>
 
   <style>
@@ -24,7 +26,7 @@
       padding: 0;
     }
     body {
-      background-color: #090d16;
+      background-color: #0b1220;
       color: #f1f5f9;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       min-height: 100dvh;
@@ -34,18 +36,18 @@
       padding: 24px;
     }
     .card {
-      background: #0f172a;
+      background: #131d31;
       border: 1px solid #1e293b;
       border-radius: 16px;
-      padding: 32px 28px;
-      max-width: 420px;
+      padding: 36px 28px;
+      max-width: 440px;
       width: 100%;
       text-align: center;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
     }
     .spinner {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border: 3px solid #334155;
       border-top-color: #6366f1;
       border-radius: 50%;
@@ -56,7 +58,7 @@
       to { transform: rotate(360deg); }
     }
     h1 {
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 800;
       margin-bottom: 8px;
       letter-spacing: -0.02em;
@@ -87,9 +89,9 @@
 <body>
   <div class="card">
     <div class="spinner"></div>
-    <h1>Redirecting to Dashboard</h1>
-    <p>Connecting to the live production server. If you are not redirected within a few seconds, click below.</p>
-    <a class="btn" href="https://livestreamanalytics.vercel.app/">Launch Dashboard</a>
+    <h1>Connecting to Dashboard</h1>
+    <p>Redirecting you to the secure production analytics portal. If you are not redirected automatically, click below.</p>
+    <a class="btn" href="https://livestreamanalytics.vercel.app/">Open Dashboard</a>
   </div>
 </body>
 </html>
